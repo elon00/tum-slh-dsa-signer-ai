@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "tum-slh-dsa-signer-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "TUM Munich",
+        "PROJECT_TICKER": "TUMSLH"
+      },
+      "tools": [
+        {
+          "name": "verify_tumslh_invariants",
+          "description": "Verifies deterministic invariants for TUM SLH-DSA Signer AI on TUM Munich."
+        },
+        {
+          "name": "execute_tumslh_action",
+          "description": "Executes authenticated Security state transition."
+        }
+      ]
+    }
+  }
+}
